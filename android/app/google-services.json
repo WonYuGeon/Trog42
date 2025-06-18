@@ -1,0 +1,90 @@
+{
+  "project_info": {
+    "project_number": "936479831136",
+    "project_id": "trog42-50b75",
+    "storage_bucket": "trog42-50b75.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:936479831136:android:eac5b92cd6c93565977f05",
+        "android_client_info": {
+          "package_name": "com.trog.trog.trog"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "936479831136-5u24aq22gfv93u09hurm3j9bq4c176mb.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.trog.trog.trog",
+            "certificate_hash": "2067c3b60f0c37b8cb34d8e8a75a053b6f908bda"
+          }
+        },
+        {
+          "client_id": "936479831136-ov7l548frggkv8jlnh7vi5v3thbt36eh.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDW5cfiEKJWXP-tNWq9xHNGscreV6RUXas"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "936479831136-ov7l548frggkv8jlnh7vi5v3thbt36eh.apps.googleusercontent.com",
+              "client_type": 3
+            },
+            {
+              "client_id": "936479831136-06k6fobrq6j757d3464mg0cnposvfd5r.apps.googleusercontent.com",
+              "client_type": 2,
+              "ios_info": {
+                "bundle_id": "com.trog.trog.trog"
+              }
+            }
+          ]
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:936479831136:android:adf5f610cd5b1025977f05",
+        "android_client_info": {
+          "package_name": "com.trog.trog42"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "936479831136-ov7l548frggkv8jlnh7vi5v3thbt36eh.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDW5cfiEKJWXP-tNWq9xHNGscreV6RUXas"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "936479831136-ov7l548frggkv8jlnh7vi5v3thbt36eh.apps.googleusercontent.com",
+              "client_type": 3
+            },
+            {
+              "client_id": "936479831136-06k6fobrq6j757d3464mg0cnposvfd5r.apps.googleusercontent.com",
+              "client_type": 2,
+              "ios_info": {
+                "bundle_id": "com.trog.trog.trog"
+              }
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
