@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:trog42/models/function_list.dart';
 import 'package:trog42/models/function_tilte_list.dart';
-import 'package:trog42/widgets/function_card_view.dart';
+import 'package:trog42/widgets/function_card.dart';
 
 class FunctionPage extends StatelessWidget {
   const FunctionPage({
@@ -24,7 +24,11 @@ class FunctionPage extends StatelessWidget {
       child: Column(
         mainAxisAlignment: MainAxisAlignment.center,
         children: [
-          FunctionCard(width: maxWidth * 0.6, height: maxWidth * 0.6 * 1.5),
+          FunctionCard(
+            width: maxWidth * 0.6,
+            height: maxWidth * 0.6 * 1.5,
+            function: function,
+          ),
           const SizedBox(height: 10),
           Text(
             function.displayName,

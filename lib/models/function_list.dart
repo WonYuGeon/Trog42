@@ -1,4 +1,7 @@
+import 'package:flutter/widgets.dart';
+import 'package:flutter_svg/svg.dart';
 import 'package:trog42/models/function_tilte_list.dart';
+import 'package:trog42/screens/placeholder_screen.dart';
 
 enum FunctionList {
   home,
@@ -42,6 +45,33 @@ extension FunctionListExtension on FunctionList {
         return '미달 현황';
     }
   }
+
+  SvgPicture? get icon {
+    switch (this) {
+      case FunctionList.home:
+        return null;
+      case FunctionList.myCard:
+        return SvgPicture.asset('assets/images/splash/trog_tongue.svg');
+      case FunctionList.currentCardPrice:
+        return SvgPicture.asset('assets/images/splash/trog_tongue.svg');
+      case FunctionList.cardReservation:
+        return SvgPicture.asset('assets/images/splash/trog_tongue.svg');
+      case FunctionList.cardExchangeDetails:
+        return SvgPicture.asset('assets/images/splash/trog_tongue.svg');
+      case FunctionList.chat:
+        return SvgPicture.asset('assets/images/splash/trog_tongue.svg');
+      case FunctionList.introTypingPractice:
+        return SvgPicture.asset('assets/images/splash/trog_tongue.svg');
+      case FunctionList.ownTypingPractice:
+        return SvgPicture.asset('assets/images/splash/trog_tongue.svg');
+      case FunctionList.myGuild:
+        return SvgPicture.asset('assets/images/splash/trog_tongue.svg');
+      case FunctionList.guildCondition:
+        return SvgPicture.asset('assets/images/splash/trog_tongue.svg');
+      case FunctionList.unfulfilled:
+        return SvgPicture.asset('assets/images/splash/trog_tongue.svg');
+    }
+  }
 }
 
 final Map<FunctionTitleList, List<FunctionList>> items = {
@@ -62,4 +92,24 @@ final Map<FunctionTitleList, List<FunctionList>> items = {
     FunctionList.guildCondition,
     FunctionList.unfulfilled,
   ],
+};
+
+final Map<FunctionList, Widget> routes = {
+  // 카드 교환소
+  FunctionList.myCard: const PlaceholderScreen(title: '내 카드'),
+  FunctionList.currentCardPrice: const PlaceholderScreen(title: '현재 카드 시세'),
+  FunctionList.cardReservation: const PlaceholderScreen(title: '카드 예약'),
+  FunctionList.cardExchangeDetails: const PlaceholderScreen(title: '카드 거래 내역'),
+  FunctionList.chat: const PlaceholderScreen(title: '채팅'),
+  
+  // 마피아 타자 연습
+  FunctionList.introTypingPractice: const PlaceholderScreen(title: '직멘 타자 연습'),
+  FunctionList.ownTypingPractice: const PlaceholderScreen(title: '나만의 타자 연습'),
+
+  // 길드 관리
+  FunctionList.myGuild: const PlaceholderScreen(title: '내 길드'),
+  FunctionList.guildCondition: const PlaceholderScreen(title: '길드 조건'),
+  FunctionList.unfulfilled: const PlaceholderScreen(title: '미달 현황'),
+
+  // home은 FunctionPages에서 렌더링되지 않으므로 맵에 포함하지 않습니다.
 };

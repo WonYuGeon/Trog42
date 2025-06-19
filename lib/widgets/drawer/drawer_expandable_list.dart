@@ -98,7 +98,15 @@ class _DrawerExpandableListState extends State<DrawerExpandableList> {
                           ),
                         ),
                         onTap: () {
-                          Navigator.pop(context);
+                          final Widget? destination = routes[func];
+                          if (destination != null) {
+                            Navigator.push(
+                              context,
+                              MaterialPageRoute(
+                                builder: (context) => destination,
+                              ),
+                            );
+                          }
                         },
                       );
                     }).toList(),
