@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:trog42/widgets/drawer/end_drawer.dart';
+import 'package:trog42/widgets/drawer/hamburger_menu.dart';
 import 'package:trog42/widgets/function_pages.dart';
 
 class HomeScreen extends StatelessWidget {
@@ -10,7 +11,7 @@ class HomeScreen extends StatelessWidget {
     return Scaffold(
       endDrawer: EndDrawer(),
       body: Builder(
-        builder: (innerContext) {
+        builder: (context) {
           return Column(
             children: [
               Flexible(
@@ -22,16 +23,7 @@ class HomeScreen extends StatelessWidget {
                       children: [
                         Row(
                           mainAxisAlignment: MainAxisAlignment.end,
-                          children: [
-                            IconButton(
-                              onPressed: () {
-                                Scaffold.of(innerContext).openEndDrawer();
-                              },
-                              icon: Icon(Icons.menu_rounded),
-                              color: Theme.of(context).colorScheme.onPrimary,
-                              iconSize: 35,
-                            ),
-                          ],
+                          children: [HamburgerMenu()],
                         ),
                       ],
                     ),
