@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:trog42/screens/settings_screen.dart';
-import 'package:trog42/screens/user_info_screen.dart';
+import 'package:trog42/screens/drawer/settings_screen.dart';
+import 'package:trog42/screens/drawer/user_info_screen.dart';
 
 class DrawerHeader extends StatelessWidget {
   const DrawerHeader({super.key});

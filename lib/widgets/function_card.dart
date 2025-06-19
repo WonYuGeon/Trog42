@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:trog42/models/function_list.dart';
+import 'package:trog42/models/function/function_list.dart';
 
 class FunctionCard extends StatelessWidget {
   final double width;

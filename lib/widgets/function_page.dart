@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:trog42/models/function_list.dart';
-import 'package:trog42/models/function_tilte_list.dart';
+import 'package:trog42/models/function/function_list.dart';
+import 'package:trog42/models/function/function_tilte_list.dart';
 import 'package:trog42/widgets/function_card.dart';
 
 class FunctionPage extends StatelessWidget {

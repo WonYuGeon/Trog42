@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
-import 'package:trog42/models/function_list.dart';
-import 'package:trog42/models/function_tilte_list.dart';
 import 'package:animated_visibility/animated_visibility.dart';
+import 'package:trog42/models/function/function_list.dart';
+import 'package:trog42/models/function/function_tilte_list.dart';
 import 'package:trog42/screens/home_screen.dart';
 
 class DrawerExpandableList extends StatefulWidget {
