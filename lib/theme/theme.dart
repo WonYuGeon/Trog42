@@ -3,10 +3,10 @@ import 'package:flutter/material.dart';
 // 1. Light Theme을 위한 ColorScheme 정의
 const lightColorScheme = ColorScheme(
   brightness: Brightness.light,
-  primary: Color(0xFFFFFFFF),
-  onPrimary: Color(0xFFFFFFFF), // Primary 색상 위에 표시될 콘텐츠(텍스트, 아이콘) 색상
-  secondary: Color(0xFF625B71), // 보조 색상 (필터 칩, 플로팅 액션 버튼 등)
-  onSecondary: Color(0xFFFFFFFF), // Secondary 색상 위에 표시될 콘텐츠 색상
+  primary: Color(0xFFDDDDDD),
+  onPrimary: Color(0xFF000000), // Primary 색상 위에 표시될 콘텐츠(텍스트, 아이콘) 색상
+  secondary: Color(0xFFCCCCCC), // 보조 색상 (필터 칩, 플로팅 액션 버튼 등)
+  onSecondary: Color(0xFF111111), // Secondary 색상 위에 표시될 콘텐츠 색상
   error: Color(0xFFB3261E), // 에러 표시를 위한 색상
   onError: Color(0xFFFFFFFF), // Background 색상 위에 표시될 콘텐츠 색상
   surface: Color(0xFFFFFBFE), // 카드, 다이얼로그, 시트 등의 표면 색상
@@ -18,8 +18,8 @@ const darkColorScheme = ColorScheme(
   brightness: Brightness.dark,
   primary: Color(0xFF222222), // 앱의 주요 색상 (버튼, 활성 상태 등)
   onPrimary: Color(0xFFFFFFFF),
-  secondary: Color(0xFFCCC2DC),
-  onSecondary: Color(0xFF332D41),
+  secondary: Color(0xFF333333),
+  onSecondary: Color(0xFFEEEEEE),
   error: Color(0xFFF2B8B5),
   onError: Color(0xFF601410),
   surface: Color(0xFF1C1B1F),

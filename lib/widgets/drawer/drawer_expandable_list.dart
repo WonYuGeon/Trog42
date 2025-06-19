@@ -98,7 +98,6 @@ class _DrawerExpandableListState extends State<DrawerExpandableList> {
                           ),
                         ),
                         onTap: () {
-                          print("${func.displayName} Tapped!");
                           Navigator.pop(context);
                         },
                       );
