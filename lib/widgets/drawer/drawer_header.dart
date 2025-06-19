@@ -1,11 +1,8 @@
-
 import 'package:flutter/material.dart';
 import 'package:trog42/screens/settings_screen.dart';
 
 class DrawerHeader extends StatelessWidget {
-  const DrawerHeader({
-    super.key,
-  });
+  const DrawerHeader({super.key});
 
   @override
   Widget build(BuildContext context) {
@@ -17,11 +14,10 @@ class DrawerHeader extends StatelessWidget {
             children: [
               IconButton(
                 onPressed: () {
-                  Navigator.pushReplacement(
+                  Navigator.push(
                     context,
                     MaterialPageRoute(
-                      builder:
-                          (context) => const SettingsScreen(),
+                      builder: (context) => const SettingsScreen(),
                     ),
                   );
                 },
