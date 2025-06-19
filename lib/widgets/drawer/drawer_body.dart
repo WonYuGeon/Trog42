@@ -2,14 +2,9 @@ import 'package:flutter/material.dart';
 import 'package:trog42/models/function_list.dart';
 import 'package:trog42/widgets/drawer/drawer_expandable_list.dart';
 
-class DrawerBody extends StatefulWidget {
+class DrawerBody extends StatelessWidget {
   const DrawerBody({super.key});
 
-  @override
-  State<DrawerBody> createState() => _DrawerBodyState();
-}
-
-class _DrawerBodyState extends State<DrawerBody> {
   @override
   Widget build(BuildContext context) {
     final titles = items.keys.toList();
