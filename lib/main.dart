@@ -3,6 +3,7 @@ import 'package:flutter/material.dart';
 import 'package:firebase_core/firebase_core.dart';
 import 'package:provider/provider.dart';
 import 'package:trog42/screens/home_screen.dart';
+import 'package:trog42/services/theme_service.dart';
 import 'package:trog42/theme/theme.dart';
 import 'package:trog42/theme/theme_notifier.dart';
 
@@ -12,9 +13,12 @@ Future<void> main() async {
   WidgetsFlutterBinding.ensureInitialized();
   await Firebase.initializeApp(options: DefaultFirebaseOptions.currentPlatform);
 
+  final savedThemeMode = await ThemeService().loadTheme();
+
   runApp(
     ChangeNotifierProvider(
-      create: (_) => ThemeNotifier(),
+      // ✨ 불러온 테마로 ThemeNotifier를 초기화합니다.
+      create: (_) => ThemeNotifier(initialThemeMode: savedThemeMode),
       child: const MyApp(),
     ),
   );

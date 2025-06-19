@@ -6,6 +6,9 @@ class ThemeNotifier extends ChangeNotifier {
 
   ThemeMode get themeMode => _themeMode;
 
+  ThemeNotifier({required ThemeMode initialThemeMode})
+    : _themeMode = initialThemeMode;
+
   void setThemeMode(ThemeMode mode) {
     _themeMode = mode;
     notifyListeners(); // 상태 변경 알림
