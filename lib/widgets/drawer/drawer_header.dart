@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:trog42/screens/settings_screen.dart';
+import 'package:trog42/screens/user_info_screen.dart';
 
 class DrawerHeader extends StatelessWidget {
   const DrawerHeader({super.key});
@@ -26,7 +27,14 @@ class DrawerHeader extends StatelessWidget {
                 iconSize: 30,
               ),
               IconButton(
-                onPressed: () {},
+                onPressed: () {
+                  Navigator.push(
+                    context,
+                    MaterialPageRoute(
+                      builder: (context) => const UserInfoScreen(),
+                    ),
+                  );
+                },
                 icon: Icon(Icons.person_rounded),
                 color: Theme.of(context).colorScheme.onPrimary,
                 iconSize: 35,

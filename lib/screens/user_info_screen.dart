@@ -1,8 +1,7 @@
 import 'package:flutter/material.dart';
-import 'package:trog42/widgets/settings/setting_theme.dart';
 
-class SettingsScreen extends StatelessWidget {
-  const SettingsScreen({super.key});
+class UserInfoScreen extends StatelessWidget {
+  const UserInfoScreen({super.key});
 
   @override
   Widget build(BuildContext context) {
@@ -20,7 +19,7 @@ class SettingsScreen extends StatelessWidget {
           },
         ),
         title: Text(
-          '설정',
+          '사용자',
           style: TextStyle(
             color: Theme.of(context).colorScheme.onPrimary,
             fontWeight: FontWeight.bold,
@@ -52,7 +51,6 @@ class SettingsScreen extends StatelessWidget {
                 padding: const EdgeInsets.all(40.0),
                 child: Column(
                   children: const [
-                    SettingTheme(),
                     // 다른 설정 위젯들을 여기에 추가
                   ],
                 ),
