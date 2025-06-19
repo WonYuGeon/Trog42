@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:trog42/widgets/drawer/end_drawer.dart';
 import 'package:trog42/widgets/drawer/hamburger_menu.dart';
-import 'package:trog42/widgets/function_pages.dart';
+import 'package:trog42/widgets/function/function_pages.dart';
 
 class HomeScreen extends StatelessWidget {
   const HomeScreen({super.key});

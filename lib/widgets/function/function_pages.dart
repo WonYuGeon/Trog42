@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:trog42/models/function/function_list.dart';
 import 'package:trog42/models/function/function_tilte_list.dart';
 import 'package:trog42/services/page_service.dart'; // ✨ 1. PageService import
-import 'package:trog42/widgets/function_page.dart';
+import 'package:trog42/widgets/function/function_page.dart';
 
 class FunctionPages extends StatefulWidget {
   const FunctionPages({super.key});
