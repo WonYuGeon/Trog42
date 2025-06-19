@@ -11,3 +11,12 @@ class Equipment extends Item {
 
   int get collectionPoint => _collectionPoint;
 }
+
+enum Type {
+  skin,
+  nametag,
+  frame,
+  wallet,
+  emoticon,
+  balloon,
+}
