@@ -1,16 +1,16 @@
 import 'package:flutter/material.dart';
-import 'package:trog42/models/function/function_list.dart';
+import 'package:trog42/models/feature/feature.dart';
 
 class FunctionCard extends StatelessWidget {
   final double width;
   final double height;
-  final FunctionList function;
+  final Feature feature;
 
   const FunctionCard({
     super.key,
     required this.width,
     required this.height,
-    required this.function,
+    required this.feature,
   });
 
   @override
@@ -18,13 +18,11 @@ class FunctionCard extends StatelessWidget {
     return Center(
       child: GestureDetector(
         onTap: () {
-          final Widget? destination = routes[function];
-          if (destination != null) {
-            Navigator.push(
-              context,
-              MaterialPageRoute(builder: (context) => destination),
-            );
-          }
+          final Widget destination = feature.route;
+          Navigator.push(
+            context,
+            MaterialPageRoute(builder: (context) => destination),
+          );
         },
         child: Container(
           decoration: BoxDecoration(

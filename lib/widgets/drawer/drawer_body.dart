@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:trog42/models/function/function_list.dart';
+import 'package:trog42/services/feature_category_service.dart';
 import 'package:trog42/widgets/drawer/drawer_expandable_list.dart';
 
 class DrawerBody extends StatelessWidget {
@@ -7,21 +7,21 @@ class DrawerBody extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    final titles = items.keys.toList();
+    final featuresByCategory = FeatureCategoryService.getFeaturesByCategory();
 
     return Expanded(
       child: ListView.separated(
         padding: const EdgeInsets.fromLTRB(16, 8, 16, 8),
         scrollDirection: Axis.vertical,
+        itemCount: featuresByCategory.length,
         itemBuilder: (context, index) {
-          final title = titles[index];
-          final functions = items[title]!;
+          final entry = featuresByCategory.entries.elementAt(index);
+          final category = entry.key; // 예: FeatureTypeList.collection
+          final features = entry.value;
 
-          // ✨ 복잡한 UI 로직 대신, 상태를 스스로 관리하는 위젯을 사용
-          return DrawerExpandableList(title: title, functions: functions);
+          return DrawerExpandableList(category: category, features: features);
         },
         separatorBuilder: (context, index) => const Divider(height: 0.5),
-        itemCount: titles.length,
       ),
     );
   }

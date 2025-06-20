@@ -1,21 +1,19 @@
 import 'package:flutter/material.dart';
-import 'package:trog42/models/function/function_list.dart';
-import 'package:trog42/models/function/function_tilte_list.dart';
-import 'package:trog42/widgets/function/function_card.dart';
+import 'package:trog42/constants/feature/feature_category.dart';
+import 'package:trog42/models/feature/feature.dart';
+import 'package:trog42/widgets/feature/function_card.dart';
 
 class FunctionPage extends StatelessWidget {
   const FunctionPage({
     super.key,
     required this.scale,
     required this.maxWidth,
-    required this.title,
-    required this.function,
+    required this.feature,
   });
 
   final double scale;
   final double maxWidth;
-  final FunctionTitleList title;
-  final FunctionList function;
+  final Feature feature;
 
   @override
   Widget build(BuildContext context) {
@@ -27,11 +25,11 @@ class FunctionPage extends StatelessWidget {
           FunctionCard(
             width: maxWidth * 0.6,
             height: maxWidth * 0.6 * 1.4,
-            function: function,
+            feature: feature,
           ),
           const SizedBox(height: 10),
           Text(
-            function.displayName,
+            feature.name,
             style: TextStyle(
               color: Theme.of(context).colorScheme.onPrimary,
               fontSize: 20,
@@ -39,7 +37,7 @@ class FunctionPage extends StatelessWidget {
             ),
           ),
           Text(
-            title.displayName,
+            feature.category.displayName,
             style: TextStyle(
               color: Theme.of(
                 context,

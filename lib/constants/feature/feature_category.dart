@@ -1,4 +1,4 @@
-enum FunctionTitleList {
+enum FeatureCategoryList {
   home,
   collection, // 수집
   fame, // 명성
@@ -8,22 +8,22 @@ enum FunctionTitleList {
   guildManagement, // 길드 관리
 }
 
-extension FunctionTitleListExtension on FunctionTitleList {
+extension FeatureCategoryListExtension on FeatureCategoryList {
   String get displayName {
     switch (this) {
-      case FunctionTitleList.home:
+      case FeatureCategoryList.home:
         return '홈';
-      case FunctionTitleList.collection:
+      case FeatureCategoryList.collection:
         return '수집';
-      case FunctionTitleList.fame:
+      case FeatureCategoryList.fame:
         return '명성';
-      case FunctionTitleList.etcCalculator:
+      case FeatureCategoryList.etcCalculator:
         return '기타 계산기';
-      case FunctionTitleList.cardExchangeOffice:
+      case FeatureCategoryList.cardExchangeOffice:
         return '카드 교환소';
-      case FunctionTitleList.mafiaTypingPractice:
+      case FeatureCategoryList.mafiaTypingPractice:
         return '마피아 타자 연습';
-      case FunctionTitleList.guildManagement:
+      case FeatureCategoryList.guildManagement:
         return '길드 관리';
     }
   }

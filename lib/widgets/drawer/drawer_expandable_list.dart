@@ -1,17 +1,17 @@
 import 'package:flutter/material.dart';
 import 'package:animated_visibility/animated_visibility.dart';
-import 'package:trog42/models/function/function_list.dart';
-import 'package:trog42/models/function/function_tilte_list.dart';
+import 'package:trog42/constants/feature/feature_category.dart';
+import 'package:trog42/models/feature/feature.dart';
 import 'package:trog42/screens/home_screen.dart';
 
 class DrawerExpandableList extends StatefulWidget {
-  final FunctionTitleList title;
-  final List<FunctionList> functions;
+  final FeatureCategoryList category;
+  final List<Feature> features;
 
   const DrawerExpandableList({
     super.key,
-    required this.title,
-    required this.functions,
+    required this.category,
+    required this.features,
   });
 
   @override
@@ -23,7 +23,7 @@ class _DrawerExpandableListState extends State<DrawerExpandableList> {
 
   @override
   Widget build(BuildContext context) {
-    final bool canExpand = widget.functions.length > 1;
+    final bool canExpand = widget.features.length > 1;
 
     return Column(
       mainAxisSize: MainAxisSize.min,
@@ -31,7 +31,7 @@ class _DrawerExpandableListState extends State<DrawerExpandableList> {
         // 제목과 화살표 아이콘 부분
         ListTile(
           title: Text(
-            widget.title.displayName,
+            widget.category.displayName,
             style: const TextStyle(fontSize: 16, fontWeight: FontWeight.bold),
           ),
           trailing:
@@ -86,11 +86,11 @@ class _DrawerExpandableListState extends State<DrawerExpandableList> {
               padding: const EdgeInsets.only(left: 16.0, bottom: 8.0),
               child: Column(
                 children:
-                    widget.functions.map((func) {
+                    widget.features.map((func) {
                       return ListTile(
                         dense: true,
                         title: Text(
-                          func.displayName,
+                          func.name,
                           style: TextStyle(
                             color: Theme.of(
                               context,
@@ -98,15 +98,13 @@ class _DrawerExpandableListState extends State<DrawerExpandableList> {
                           ),
                         ),
                         onTap: () {
-                          final Widget? destination = routes[func];
-                          if (destination != null) {
-                            Navigator.push(
-                              context,
-                              MaterialPageRoute(
-                                builder: (context) => destination,
-                              ),
-                            );
-                          }
+                          final Widget destination = func.route;
+                          Navigator.push(
+                            context,
+                            MaterialPageRoute(
+                              builder: (context) => destination,
+                            ),
+                          );
                         },
                       );
                     }).toList(),
