@@ -13,14 +13,16 @@ class EndDrawer extends StatelessWidget {
         return SizedBox(
           width: maxWidth * 0.8,
           child: Drawer(
-            child: Padding(
-              padding: const EdgeInsets.all(10.0),
-              child: Column(
-                children: [
-                  DrawerHeader(),
-                  const Divider(),
-                  DrawerBody(),
-                ],
+            child: SafeArea(
+              child: Padding(
+                padding: const EdgeInsets.symmetric(horizontal: 10),
+                child: Column(
+                  children: [
+                    DrawerHeader(),
+                    const Divider(),
+                    DrawerBody(),
+                  ],
+                ),
               ),
             ),
           ),

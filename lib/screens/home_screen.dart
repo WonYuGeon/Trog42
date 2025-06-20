@@ -10,31 +10,29 @@ class HomeScreen extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       endDrawer: EndDrawer(),
-      body: Builder(
-        builder: (context) {
-          return Column(
-            children: [
-              Flexible(
-                flex: 1,
-                child: SizedBox.expand(
-                  child: Padding(
-                    padding: const EdgeInsets.all(10.0),
-                    child: Column(
-                      children: [
-                        Row(
-                          mainAxisAlignment: MainAxisAlignment.end,
-                          children: [HamburgerMenu()],
-                        ),
-                      ],
-                    ),
+      body: SafeArea(
+        child: Column(
+          children: [
+            Flexible(
+              flex: 1,
+              child: SizedBox.expand(
+                child: Padding(
+                  padding: const EdgeInsets.symmetric(horizontal: 10),
+                  child: Column(
+                    children: [
+                      Row(
+                        mainAxisAlignment: MainAxisAlignment.end,
+                        children: [HamburgerMenu()],
+                      ),
+                    ],
                   ),
                 ),
               ),
-              FunctionPages(),
-              Flexible(flex: 1, child: Container()),
-            ],
-          );
-        },
+            ),
+            FunctionPages(),
+            Flexible(flex: 1, child: Container()),
+          ],
+        ),
       ),
     );
   }

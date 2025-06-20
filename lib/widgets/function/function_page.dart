@@ -26,7 +26,7 @@ class FunctionPage extends StatelessWidget {
         children: [
           FunctionCard(
             width: maxWidth * 0.6,
-            height: maxWidth * 0.6 * 1.5,
+            height: maxWidth * 0.6 * 1.4,
             function: function,
           ),
           const SizedBox(height: 10),
